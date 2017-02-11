@@ -1,0 +1,39 @@
+<script type="text/javascript">
+RED.nodes.registerType('emonpixel-clockwise',{
+    category: 'emonpixel',
+    color: '#e2d96e',
+    defaults: {
+        name: {value:""},
+        red: {value:"255"},
+        green: {value:"0"},
+        blue: {value:"0"}
+
+    },
+    inputs:1,
+    outputs:1,
+    icon: "white-globe.png",
+    label: function() {
+        return this.name||"emonpixel-clockwise";
+    }
+});
+</script>
+
+
+
+<script type="text/x-red" data-template-name="emonpixel-clockwise">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name"> <br>
+        <label for="node-input-red"><i class="icon-tag"></i> red</label>
+        <input type="text" id="node-input-red" placeholder="255"><br>
+        <label for="node-input-green"><i class="icon-tag"></i> green</label>
+        <input type="text" id="node-input-green" placeholder="0">
+        <label for="node-input-blue"><i class="icon-tag"></i> blue</label>
+        <input type="text" id="node-input-blue" placeholder="0">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="emonpixel-clockwise">
+    <p>if a single nubmer is passed in then this is turned into a message for display on the emonpixel. This should be bwteen 0 and 16</p>
+    <p>if a csv with 4 numbers is passed in then the first 3 numbers are used as the red, green and blue values, overwriting the config in the node and the 4th number is used as the pixel value see above </p>
+</script>

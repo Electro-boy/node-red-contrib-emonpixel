@@ -1,0 +1,19 @@
+{
+  "name": "node-red-contrib-emonpixel",
+  "version": "0.0.1",
+  "description": "A Node-RED node to control an emonpixel.",
+  "author": "David Hunnisett",
+  "keywords": [ "node-red" ],
+  "repository": {
+    "type":"git",
+    "url":"https://"
+  },
+  "node-red": {
+    "nodes": {
+      "emonpixel-background": "emonpixel/Background.js",
+      "emonpixel-clockwise": "emonpixel/Clockwise.js",
+      "emonpixel-anticlockwise": "emonpixel/antiClockwise.js"
+      }
+  }
+
+}
