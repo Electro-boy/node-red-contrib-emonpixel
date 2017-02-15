@@ -1,5 +1,5 @@
+var parser = require('./parse');
 module.exports = function(RED) {
-    'use strict'
 
     function backgroundNode(config) {
         RED.nodes.createNode(this, config);
@@ -7,10 +7,13 @@ module.exports = function(RED) {
         this.name = config.name;
 
         this.on('input', function(msg) {
-          console.log(msg);
-          var posVal = msg.payload
+            var posVal = parser.parseBG(msg.payload);
+            var newMsg = {
+                payload: 'background/' + posVal.red + '/' + posVal.green + '/' + posVal.blue
+            };
+            node.send (newMsg);
         });
     }
 
     RED.nodes.registerType("emonpixel-background", backgroundNode);
-}
+};
