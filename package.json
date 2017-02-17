@@ -3,12 +3,13 @@
   "version": "0.0.1",
   "description": "A Node-RED node to control an emonpixel.",
   "author": "David Hunnisett",
+  "license": "GPL-3.0",
   "keywords": [
     "node-red"
   ],
   "repository": {
     "type": "git",
-    "url": "https://"
+    "url": "https://github.com/openenergymonitor/node-red-contrib-emonpixel"
   },
   "node-red": {
     "nodes": {
