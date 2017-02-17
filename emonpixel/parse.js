@@ -1,5 +1,4 @@
 var parse = require('csv-parse/lib/sync');
-//require('should');
 function checkval(aVal) {
     parseInt(aVal);
     if (aVal < 0 || aVal > 255) {

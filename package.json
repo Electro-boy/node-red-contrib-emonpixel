@@ -19,7 +19,6 @@
     }
   },
   "dependencies": {
-    "csv-parse": "^1.2.0",
-    "should": "^11.2.0"
+    "csv-parse": "^1.2.0"
   }
 }
